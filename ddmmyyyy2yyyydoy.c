@@ -1,4 +1,3 @@
-  GNU nano 2.9.3                                                     /home/gpsr/tools/ddmmyyyy2doy.c                                                               
 /*.. ....-.... ....-.... ....-.... ....-.... ....-.... ....-.... ....-*/
 /*Compile com gcc ddmmyyyy2yyyydoy.c -o ddmmyyyy2yyyydoy.e*/
 #include <stdio.h>
