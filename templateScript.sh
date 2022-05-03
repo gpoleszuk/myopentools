@@ -1,5 +1,5 @@
-#...5....|....5....|....5....|....5....|....5....|....5....|....5....|....5SRULE
-#EINRGUISCRIPT
+#...5....|....5...2|0...5....|....5...4|0...5....|....5...6|0...5....|....5SRULE
+#EINRGUISCRIPT###
 #!/bin/bash
 #
 ### HDRSection ##
@@ -13,7 +13,7 @@
 #           :  2. update the "LastUpdate" field automatically
 # Bugs      : dependencies are not checked
 # Version   : 0.0.1
-# LastUpdate: 03May2022 21:06:19Z
+# LastUpdate: 03May2022 21:37:31Z
 #*******************************************************************************
 #
 ### INISection ##
@@ -53,11 +53,11 @@ doSomeThing ${someVariable}
 ### ENDSection ##
 echo "ENDE"; exit 0;
 #
-#ENDRGUISCRIPT
-#...5....|....5....|....5....|....5....|....5....|....5....|....5....|....5ERULE
+#ENDRGUISCRIPT###
+#...5....|....5...2|0...5....|....5...4|0...5....|....5...6|0...5....|....5ERULE
 ### SHASection ##
 Hash: SHA256
 
-1138504a54fb66b67dc89dcb5baeb00e9eba7cc4d6892c3489e83845ce1b447e  -
-Hash replaced automatically by sed at 20220503T213034Z
+93502c4bb41d11167bf049f3042b3da43ad90f128b28b3e8b1166d1aa3531047  -
+Hash replaced automatically by sed at 20220503T213737Z
 #
