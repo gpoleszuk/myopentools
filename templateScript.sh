@@ -50,11 +50,14 @@ someVariable=0
 ### CODSection ##
 doSomeThing ${someVariable}
 #
-#ENDRGUISCRIPT
+### ENDSection ##
 echo "ENDE"; exit 0;
+#
+#ENDRGUISCRIPT
 #...5....|....5....|....5....|....5....|....5....|....5....|....5....|....5ERULE
 ### SHASection ##
 Hash: SHA256
 
-cd50a9e8ffcb69038439a1222ec877368dea347af3d7ecc3d859f2ad197a2cb5  -
+1138504a54fb66b67dc89dcb5baeb00e9eba7cc4d6892c3489e83845ce1b447e  -
+Hash replaced automatically by sed at 20220503T213034Z
 #
