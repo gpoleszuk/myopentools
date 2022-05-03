@@ -12,7 +12,7 @@
 # ToDo      :  0.
 # Bugs      : Chr(127) does not print an ASCII char on screen
 # Version   : 0.0.1
-# LastUpdate: 03May2022 21:30:02Z
+# LastUpdate: 2022.05.03Z22:10:52 *
 #*******************************************************************************
 #
 ### INISection ##
@@ -30,12 +30,13 @@ grep "....5ERULE$"   -B 999999   ${scrFName} | sha256sum ${shaopts} ${scrFName}
 if [ $? -eq 0 ]; then
   echo "Checksum OK";
 else
-  oldCheckSum=$(grep '^###.SHASection.##$' -A      3 ${scrFName} | tail -1  )
-  newCheckSum=$(grep "....5ERULE$"         -B 999999 ${scrFName} | sha256sum)
   echo "Bad checksum. Replaced it [Y/N]?";
   read replaceCheckSum
   if [ "${replaceCheckSum}" == "Y" ]; then
-    timeStampS=$(date -u +"%Y%m%dT%H%M%SZ")
+    oldCheckSum=$(grep '^###.SHASection.##$' -A      3 ${scrFName} | tail -1  )
+    timeStampS=$(date -u +'%Y.%m.%dZ%H:%M:%S')
+    sed -i "/^# LastUpdate: /c\# LastUpdate: ${timeStampS} *" ${scrFName}
+    newCheckSum=$(grep "....5ERULE$"         -B 999999 ${scrFName} | sha256sum)
     addAutoMsg="\nHash replaced automatically by sed at ${timeStampS}"
     sed -i "s/${oldCheckSum}/${newCheckSum}${addAutoMsg}/g" ${scrFName}
   else
@@ -67,6 +68,6 @@ echo "ENDE"; exit 0;
 ### SHASection ##
 Hash: SHA256
 
-a03c34beb42f04cd88b0a7b29ede51d138a8552a859279e35b10b00cc9fe0123  -
-Hash replaced automatically by sed at 20220503T213906Z
+eaa96d639c7a2ebfdac0de3aaaa969bd9cfe03194e67795a98328da1f339d8e6  -
+Hash replaced automatically by sed at 2022.05.03Z22:10:52
 #
