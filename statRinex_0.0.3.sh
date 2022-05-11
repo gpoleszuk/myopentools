@@ -5,7 +5,7 @@
 ### HDRSection ##
 #*******************************************************************************
 # Filename  : statRinex
-# Purpose   : Check each 15minutes windows of a 15s daily RINEX
+# Purpose   : Check each 15 minutes windows of a 15s daily RINEX
 # Input     : year      : with 4 digits
 #           : doy number: with 0 padded or 'doy numbers list'
 #           : section   : the section code (e.g.: 1)
